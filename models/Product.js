@@ -31,7 +31,7 @@ Product.init(
       allowNull: false,
       defaultValue: 10,
       validate: {
-        isAlphanumeric: true
+        isNumeric: true
       }
     },
     category_id: {
