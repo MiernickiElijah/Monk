@@ -70,7 +70,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
   try {
-    const updateCatData = await Category.create({
+    const updateCatData = await Category.put({
       product_id: req.body.product_id,
     });
     res.status(200).json(updateCatData);

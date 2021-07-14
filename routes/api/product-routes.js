@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const prodData = await Product.findAll({
-      include: [{ model: Category }, { model: Tag }],
+      include: [{ model: Category }, { model: Tag }, { model: ProductTag }],
       attributes: {
         include: [
           [
@@ -33,13 +33,13 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const singleProd = await Category.findByPk(req.params.id, {
-      include: [{ model: Category }, { model: Tag }],
+      include: [{ model: Category }, { model: Tag }, { model: ProductTag }],
       attributes: {
         include: [
           [
             // Use plain SQL to get a count of all short books
             sequelize.literal(
-              '(SELECT COUNT(*) FROM category AND product = Category.id)'
+              '(SELECT COUNT(*) FROM category AND product = id)'
             ),
             'product',
           ],
