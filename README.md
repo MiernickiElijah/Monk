@@ -17,7 +17,7 @@ This is an ecommerce back end mark-up utilizing MySQL databases, Express.js,  an
 Please follow video tutorial for instructions.
 --------------
 ## Walkthrough  
-![tutorial](https://drive.google.com/file/d/1AistlSWfNZGfTBfNQvDji3RwC-_4oT1e/view "walkthrough")
+[Walkthrough](https://drive.google.com/file/d/1AistlSWfNZGfTBfNQvDji3RwC-_4oT1e/view){:target="_blank"}
 --------------
 ## Credits  
 
